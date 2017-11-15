@@ -1,34 +1,28 @@
-![mXparser icon](http://mathspace.pl/wp-content/uploads/2015/12/mxparser-logo-pi.png)
+![mXparser icon](http://mathparser.org/wp-content/uploads/2017/07/mxparser-logo.png)
 
-# mXparser - Math Parser Java C# Library
 **mXparser** is **a highly flexible parser of mathematical expressions provided as text**. Software delivers easy to use API for JAVA and C# .NET. 
 
-# Main functionalities:
-- **basic operators**, i.e.: +, , *, ^, !
-- **[Boolean logic](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/BooleanAlgebra.html)** operators i.e.: or, and, xor
-- **[binary relations](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/BinaryRelations.html)** i.e.: =, <, >
-- **[math functions](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/MathFunctions.html)** (large library of 1-arg, 2-arg, 3-arg - functions) i.e.: sin, cos, Stirling numbers, log, inverse functions
-- **[constants](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/MathConstants.html)** (large library), i.e.: pi, e, golden ratio
-- **n-args functions**, i.e.: [greatest common divisor](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/MathFunctions.html#gcd(int...))
-- **[iterated summation and product operators](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/NumberTheory.html)**
-- **[differentiation and integration](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/mathcollection/NumericalAnalysis.html)**
+# Supported frameworks
+![mXparser frameworks](http://mathparser.org/wp-content/uploads/2017/05/supported-frameworks.png)
+- JAVA: 1.5, 1.6, 1.7, 1.8
+- Android - tested with mxparser compiled using jdk 1.7
+- .NET / MONO: 2.0, 3.0, 3.5, 4.0, 4.5, 4.6, 4.7 (CLS)
+- .NET Core
+- .NET Standard, .NET PCL
+- Xamarin.Android
+- Xamarin.iOS
 
+# JAVA intro
+![mXparser demo](http://mathparser.org/wp-content/uploads/2017/05/mxparser-demo-r2.gif)
 
-# High flexibility functionalities
-- **[user defined constants](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/Constant.html)** and arguments, both free - and dependent on other arguments + possibility of use in functions
-- **[user defined functions](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/Function.html)** (both free and depended)
-- **[user defined recursive arguments](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/RecursiveArgument.html)** + simple (controlled) recursion (1 recursive argument)
-- **[user defined recursive functions / expressions (any)](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/Function.html#setRecursiveMode())** - complex, many arguments, no limitation 
-- **[internal syntax checking](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/Expression.html#checkSyntax())**
-- **[internal help](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/Expression.html#getHelp())**
-- other useful functionalities, i.e.: [computing time](http://mathspace.pl/mxparser/api/org/mariuszgromada/math/mxparser/Expression.html#getComputingTime()), expression description.
+# C# intro
+![mXparser demo - csharp](http://mathparser.org/wp-content/uploads/2017/05/mxparser-demo-vs-r2.gif)
 
-# Project documentation
-### - [mXparser - API (english)](http://mathspace.pl/mxparser/api/)
-### - [mXparser - Tutorial (english)](http://mathspace.pl/mxparser-tutorial/)
-### - [MathSpace.pl - site about math with mXparser examples (polish)](http://mathspace.pl/)
-### - [MathParser.org - site about mXparser (english)](http://mathparser.org/)
+# [mXarser Tutorial](http://mathparser.org/mxparser-tutorial/)
 
+# [mXarser API](http://mathparser.org/api/)
+
+# [MathParser.org - site about mXparser](http://mathparser.org/)
 
 Best regards,
 *Mariusz Gromada*
