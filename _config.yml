@@ -1,0 +1,8 @@
+title: mXparser
+description: Math Parser Java C# Library - a flexible mathematical expressions parser for JAVA and C# .NET
+google_analytics: UA-69006770-3
+show_downloads: true
+theme: jekyll-theme-tactile
+
+gems:
+  - jekyll-mentions
