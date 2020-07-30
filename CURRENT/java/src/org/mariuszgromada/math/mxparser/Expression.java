@@ -56,6 +56,7 @@
 package org.mariuszgromada.math.mxparser;
 
 import java.io.ByteArrayInputStream;
+import java.util.Collection;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Stack;
@@ -486,6 +487,15 @@ public class Expression extends PrimitiveElement {
 		setExpressionModifiedFlag();
 		addDefinitions(elements);
 	}
+
+	public Expression(String expressionString, Collection<Argument> elements) {
+		super(Expression.TYPE_ID);
+		expressionInit();
+		this.expressionString = new String(expressionString);
+		setExpressionModifiedFlag();
+		addArguments(elements);
+	}
+
 	/**
 	 * Constructor - creates new expression from expression string.
 	 * @param expressionString    definition of the expression
@@ -714,6 +724,19 @@ public class Expression extends PrimitiveElement {
 			}
 		}
 	}
+
+	public void addDefinitions(Collection<PrimitiveElement> elements) {
+		for (PrimitiveElement e : elements) {
+			if (e != null) {
+				int elementTypeId = e.getMyTypeId();
+				if (elementTypeId == Argument.TYPE_ID) addArguments((Argument)e);
+				else if (elementTypeId == Constant.TYPE_ID) addConstants((Constant)e);
+				else if (elementTypeId == Function.TYPE_ID) addFunctions((Function)e);
+				else if (elementTypeId == RecursiveArgument.TYPE_ID_RECURSIVE) addArguments((Argument)e);
+			}
+		}
+	}
+
 	/**
 	 * Removes user defined elements (such as: Arguments, Constants, Functions)
 	 * to the expressions.
@@ -758,6 +781,18 @@ public class Expression extends PrimitiveElement {
 		}
 		setExpressionModifiedFlag();
 	}
+
+	public void addArguments(Collection<Argument> arguments) {
+		for (Argument arg : arguments) {
+			if (arg != null) {
+				argumentsList.add(arg);
+				if (arg.getArgumentBodyType() == Argument.BODY_RUNTIME)
+					arg.addRelatedExpression(this);
+			}
+		}
+		setExpressionModifiedFlag();
+	}
+
 	/**
 	 * Enables to define the arguments (associated with
 	 * the expression) based on the given arguments names.
