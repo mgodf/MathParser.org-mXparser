@@ -1804,6 +1804,8 @@ public class Expression extends PrimitiveElement {
 		if (function.isVariadic == false)
 			for (int argIdx = 0; argIdx < argsNumber; argIdx++)
 				function.setArgumentValue(argIdx, tokensList.get(pos + argIdx + 1).tokenValue);
+		if(function.functionExtension!=null)
+			function.functionExtension.setFunctionPosition(pos);
 		boolean functionVerboseMode = function.getVerboseMode();
 		if (verboseMode == true)
 			function.setVerboseMode();

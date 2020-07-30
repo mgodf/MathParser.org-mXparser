@@ -173,7 +173,7 @@ public class Function extends PrimitiveElement {
 	 * @see FunctionExtensionVariadic
 	 * @see Function#Function(String, FunctionExtension)
 	 */
-	private FunctionExtension functionExtension;
+	public FunctionExtension functionExtension;
 	/**
 	 * Function extension variadic (body based in code)
 	 *

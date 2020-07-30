@@ -89,6 +89,14 @@ package org.mariuszgromada.math.mxparser;
  *
  */
 public interface FunctionExtension {
+
+	/**
+	 * Sets value of function position.
+	 *
+	 * @param functionPosition    - position of function in expression
+	 */
+	public void setFunctionPosition(int functionPosition);
+
 	/**
 	 * Gets parameters number.
 	 *

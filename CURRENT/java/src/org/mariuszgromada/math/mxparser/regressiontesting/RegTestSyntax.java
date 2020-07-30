@@ -3034,6 +3034,8 @@ public class RegTestSyntax {
 class FunExt implements FunctionExtension {
 	double x;
 	double y;
+	int functionPosition;
+
 	FunExt() {
 		x = Double.NaN;
 		y = Double.NaN;
@@ -3042,6 +3044,11 @@ class FunExt implements FunctionExtension {
 		this.x = x;
 		this.y = y;
 	}
+
+	public void setFunctionPosition(int functionPosition){
+		this.functionPosition = functionPosition;
+	}
+
 	public int getParametersNumber() {
 		return 2;
 	}
